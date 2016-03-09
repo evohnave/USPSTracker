@@ -1,0 +1,8 @@
+http://production.shippingapis.com/ShippingApi.dll?API=TrackV2&XML=<TrackFieldRequest USERID="242SELF05954">
+<TrackID ID="RN236981036GB"> 
+</TrackID> 
+
+</TrackFieldRequest>
+
+
+http://production.shippingapis.com/ShippingApi.dll?API=TrackV2&XML=<TrackFieldRequest USERID="242SELF05954"><TrackID ID="RN236981036GB"></TrackID></TrackFieldRequest>
