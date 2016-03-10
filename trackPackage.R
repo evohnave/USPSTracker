@@ -20,8 +20,9 @@ trackPackage <- function(trackID) {
         if ("Error" %in% names(xml.l$TrackInfo)) {
             # Had an error
             ans <- rbind(ans,
+                         ", ",
                          xml.l$TrackInfo$Error$Description)
-            rownames(ans) <- c("PackageID", "Status")
+            rownames(ans) <- c("PackageID", "Time","Status")
         } else {
             # No error, give last details
             attach(xml.l$TrackInfo$TrackSummary)

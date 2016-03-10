@@ -6,5 +6,9 @@ trackMyPackages <- function(){
                   "RB782044557DE")
 
     source(file = "trackPackage.R")
-    lapply(X = trackIDs, FUN = trackPackage)
+    WhereAreThey <- as.data.frame(lapply(X = trackIDs, FUN = trackPackage),
+                                  stringsAsFactors = FALSE)
+    names(WhereAreThey) <- WhereAreThey[1,]
+    WhereAreThey <- WhereAreThey[2:3,]
+    return(WhereAreThey)
 }
