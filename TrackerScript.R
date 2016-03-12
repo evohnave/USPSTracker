@@ -1,7 +1,9 @@
+# Delivered packages
+# "RA548921599DE",
+
 trackMyPackages <- function(){
     # Place the tracking numbers in trackIDs here...
-    trackIDs <- c("RA548921599DE",
-                  "RN262336226GB",
+    trackIDs <- c("RN262336226GB",
                   "RA128783708SI",
                   "RB782044557DE")
 
