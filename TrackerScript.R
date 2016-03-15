@@ -2,12 +2,11 @@
 # "RA548921599DE",
 # "RG011796925DE" - Arab Byzantine Book
 # "RN262336226GB" - Roma coin
+# "RA128783708SI" - 5 1 kurus
 
 trackMyPackages <- function(){
     # Place the tracking numbers in trackIDs here...
-    trackIDs <- c("RA128783708SI",
-                  "RB782044557DE",
-                  "RN262336226GB")
+    trackIDs <- c("RB782044557DE")
 
     source(file = "trackPackage.R")
     WhereAreThey <- as.data.frame(lapply(X = trackIDs, FUN = trackPackage),
