@@ -3,14 +3,13 @@
 # "RG011796925DE" - Arab Byzantine Book
 # "RN262336226GB" - Roma coin
 # "RA128783708SI" - 5 1 kurus
-# "RA471329095DE" - Incl Bafa
+# "RA471329095DE" - Incl Bafa - Rcvd
 # "RB782044557DE" - Savoca 3 lot package
 # "RB882050630DE" - Savoca package
 
 trackMyPackages <- function(){
     # Place the tracking numbers in trackIDs here...
     trackIDs <- c("RA128783708SI",
-                  "RA471329095DE",
                   "RB882050630DE")
 
     source(file = "trackPackage.R")
