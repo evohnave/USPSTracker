@@ -1,17 +1,17 @@
 #  Packages
 # "RA128783708SI" - 5 1 kurus
-# "RA471329095DE" - Incl Bafa - received
+# "RA471329095DE" - Incl Bafa - Received
 # "RA548921599DE"
-# "RB033236168DE" - Solidus 2 lots - Delivered
-# "RB516620411DE" - Arab Byzantine coin - received
+# "RB033236168DE" - Solidus 2 lots - Received
+# "RB516620411DE" - Arab Byzantine coin - Received
 # "RB782044557DE" - Savoca 3 lot package
 # "RB882050630DE" - Savoca package - Received
 # "RG011796925DE" - Arab Byzantine Book
-# "RN256013306GB" - Naville Arab-Byzantine - received
+# "RN256013306GB" - Naville Arab-Byzantine - Received
 # "RN262336226GB" - Roma coin - Received
 # "RR1815899110AL" - 1293/33 2k
-# "RB882053052DE" - Savoca multi lot - received
-# "9200190164917330224869" - Wallet knife - received
+# "RB882053052DE" - Savoca multi lot - Received
+# "9200190164917330224869" - Wallet knife - Received
 
 trackMyPackages <- function(){
     # Place the tracking numbers in trackIDs here...
