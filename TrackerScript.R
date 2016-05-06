@@ -1,14 +1,14 @@
 #  Packages
 # "RA128783708SI" - 5 1 kurus
 # "RA471329095DE" - Incl Bafa - Received
-# "RA548921599DE"
+# "RA548921599DE" - Don't Remember - Received
 # "RB882050630DE" - Savoca 5 lots - Received
 # "RB033236168DE" - Solidus 2 lots - Received
 # "RB516620411DE" - Arab Byzantine coin - Received
-# "RB782044557DE" - Savoca 3 lot package
+# "RB782044557DE" - Savoca 3 lot package - Received
 # "RB882050630DE" - Savoca package - Received
 # "RB882054906DE" - Savoca 1 coin - Received
-# "RG011796925DE" - Arab Byzantine Book
+# "RG011796925DE" - Arab Byzantine Book - Received
 # "RN256013306GB" - Naville Arab-Byzantine - Received
 # "RN262336226GB" - Roma coin - Received
 # "RR1815899110AL" - 1293/33 2k - Received
