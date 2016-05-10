@@ -14,12 +14,12 @@
 # "RR1815899110AL" - 1293/33 2k - Received
 # "RB882053052DE" - Savoca multi lot - Received
 # "9200190164917330224869" - Wallet knife - Received
-# "RR109944566TR" - Uslu Mezat 52
+# "RR109944566TR" - Uslu Mezat 52 - Received
 # "9300189843900087075351" - Etsy package - Received
 
 trackMyPackages <- function(){
     # Place the tracking numbers in trackIDs here...
-    trackIDs <- c("RR109944566TR")
+    trackIDs <- c("RR109944566TR") # recieved but holding a place...
 
     source(file = "trackPackage.R")
     WhereAreThey <- as.data.frame(lapply(X = trackIDs, FUN = trackPackage),
