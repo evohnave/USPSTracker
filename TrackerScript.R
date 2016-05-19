@@ -16,12 +16,23 @@ trackMyPackages <- function(){
     return(WhereAreThey)
 }
 
-updateCSV <- function(ID, Desc, Rcvd = FALSE){
+addToCSV <- function(ID, Desc, Rcvd = FALSE){
     IDs <- read.csv(file = "packages.csv", header = TRUE, 
                     stringsAsFactors = FALSE, quote = "\"")
     newLine <- dim(IDs)[1] + 1
     IDs[newLine, 1] <- ID
     IDs[newLine, 2] <- Desc
     IDs[newLine, 3] <- Rcvd
+    write.csv(x = IDs, file = "packages.csv", row.names = FALSE)
+}
+
+updateCSV <- function(ID, Desc = "existing", Rcvd = FALSE){
+    IDs <- read.csv(file = "packages.csv", header = TRUE, 
+                    stringsAsFactors = FALSE, quote = "\"")
+    if(sum(IDs$Packages_ID == ID) != 1){
+        stop("Error", call. = FALSE)
+    }
+    IDs[IDs$Packages_ID == ID, 3] <- Rcvd
+    if(Desc != "existing") IDs[IDs$Packages_ID == ID, 2] <- Desc
     write.csv(x = IDs, file = "packages.csv", row.names = FALSE)
 }
