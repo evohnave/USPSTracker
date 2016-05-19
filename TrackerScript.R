@@ -5,9 +5,8 @@ getTrackedIDs <- function(all = FALSE){
 }
 
 trackMyPackages <- function(){
-    # Place the tracking numbers in trackIDs here...
-    trackIDs <- c("9449010200829025923249")
-    #trackIDs <- getTrackedIDs()
+
+    trackIDs <- getTrackedIDs()
 
     source(file = "trackPackage.R")
     WhereAreThey <- as.data.frame(lapply(X = trackIDs, FUN = trackPackage),
@@ -24,5 +23,5 @@ updateCSV <- function(ID, Desc, Rcvd = FALSE){
     IDs[newLine, 1] <- ID
     IDs[newLine, 2] <- Desc
     IDs[newLine, 3] <- Rcvd
-    write.csv(x = IDs, file = "packages.csv")
+    write.csv(x = IDs, file = "packages.csv", row.names = FALSE)
 }
