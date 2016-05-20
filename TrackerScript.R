@@ -8,6 +8,7 @@ trackMyPackages <- function(){
 
     trackIDs <- getTrackedIDs()
 
+    if(length(trackIDs) == 0) {stop("Nothing To Track", call. = FALSE)}
     source(file = "trackPackage.R")
     WhereAreThey <- as.data.frame(lapply(X = trackIDs, FUN = trackPackage),
                                   stringsAsFactors = FALSE)
