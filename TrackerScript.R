@@ -37,3 +37,14 @@ updateCSV <- function(ID, Desc = "existing", Rcvd = FALSE){
     if(Desc != "existing") IDs[IDs$Packages_ID == ID, 2] <- Desc
     write.csv(x = IDs, file = "packages.csv", row.names = FALSE)
 }
+
+cleanCSV <- function(){
+    rcvdPackages <- read.csv(file = "receivedPackages.csv", header = TRUE,
+                             stringsAsFactors = FALSE, quote = "\"")
+    IDs <- read.csv(file = "packages.csv", header = TRUE, 
+                    stringsAsFactors = FALSE, quote = "\"")
+    rcvdPackages <- rbind(rcvdPackages, IDs[IDs$Received == TRUE, ])
+    IDs <- IDs[IDs$Received == FALSE, ]
+    write.csv(x = rcvdPackages, file = "receivedPackages.csv", row.names = FALSE)
+    write.csv(x = IDs, file = "packages.csv", row.names = FALSE)
+}
