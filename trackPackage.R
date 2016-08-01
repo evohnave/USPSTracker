@@ -7,7 +7,7 @@ trackPackage <- function(trackID) {
     url <- "http://production.shippingapis.com/ShippingApi.dll?API=TrackV2&XML="
     xml.request.1 <- '<TrackFieldRequest USERID="242SELF05954"><TrackID ID="'
     xml.request.3 <- '"></TrackID></TrackFieldRequest>'
-    xml.request <- URLencode(paste(xml.request.1,trackID,xml.request.3,sep=""))
+    xml.request <- URLencode(paste(xml.request.1,ans,xml.request.3,sep=""))
     strGet <- paste(url, xml.request, sep="")
     r <- GET(strGet)
     if(http_status(r)$category == "Success") {
