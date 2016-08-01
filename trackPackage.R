@@ -25,13 +25,15 @@ trackPackage <- function(trackID) {
             rownames(ans) <- c("PackageID", "Time","Status")
         } else {
             # No error, give last details
-            attach(xml.l$TrackInfo$TrackSummary)
+            EventDate <- xml.l$TrackInfo$TrackSummary$EventDate
+            EventTime <- xml.l$TrackInfo$TrackSummary$EventTime
+            Event <- xml.l$TrackInfo$TrackSummary$Event
+            EventCity <- xml.l$TrackInfo$TrackSummary$EventCity
             ans <- rbind(ans,
                          paste(EventDate, ", ",EventTime, sep = ""))
             ans <- rbind(ans,
                          paste(Event, ", ", EventCity, sep = ""))
             rownames(ans) <- c("PackageID", "Time", "Status")
-            detach(xml.l$TrackInfo$TrackSummary)
         }
     }
     return(ans)
