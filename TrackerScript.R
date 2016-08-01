@@ -15,8 +15,7 @@ trackMyPackages <- function(){
     source(file = "trackPackage.R")
     WhereAreThey <- as.data.frame(lapply(X = trackIDs, FUN = trackPackage),
                                   stringsAsFactors = FALSE)
-    names(WhereAreThey) <- WhereAreThey[1,]
-    WhereAreThey <- WhereAreThey[2:3,]
+    names(WhereAreThey) <- paste("Package", 1:length(WhereAreThey), sep = " ")
     return(WhereAreThey)
 }
 
