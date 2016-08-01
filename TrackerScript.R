@@ -1,6 +1,9 @@
 getTrackedIDs <- function(all = FALSE){
-    IDs <- read.csv(file = "packages.csv", header = TRUE, 
-                    stringsAsFactors = FALSE, quote = "\"")
+    IDs <- read.csv(file = "packages.csv",
+                    header = TRUE, 
+                    stringsAsFactors = FALSE,
+                    quote = "\"",
+                    colClasses = c("character", "character", "logical"))
     return(IDs[IDs$Received <= all, 1])
 }
 
