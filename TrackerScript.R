@@ -21,7 +21,8 @@ trackMyPackages <- function(){
 
 addToCSV <- function(ID, Desc, Rcvd = FALSE){
     IDs <- read.csv(file = "packages.csv", header = TRUE, 
-                    stringsAsFactors = FALSE, quote = "\"")
+                    stringsAsFactors = FALSE, quote = "\"",
+                    colClasses = c("character","character","logical"))
     newLine <- dim(IDs)[1] + 1
     IDs[newLine, 1] <- ID
     IDs[newLine, 2] <- Desc
@@ -31,7 +32,8 @@ addToCSV <- function(ID, Desc, Rcvd = FALSE){
 
 updateCSV <- function(ID, Desc = "existing", Rcvd = FALSE){
     IDs <- read.csv(file = "packages.csv", header = TRUE, 
-                    stringsAsFactors = FALSE, quote = "\"")
+                    stringsAsFactors = FALSE, quote = "\"",
+                    colClasses = c("character","character","logical"))
     if(sum(IDs$Packages_ID == ID) != 1){
         stop("Error", call. = FALSE)
     }
@@ -42,7 +44,8 @@ updateCSV <- function(ID, Desc = "existing", Rcvd = FALSE){
 
 cleanCSV <- function(){
     rcvdPackages <- read.csv(file = "receivedPackages.csv", header = TRUE,
-                             stringsAsFactors = FALSE, quote = "\"")
+                             stringsAsFactors = FALSE, quote = "\"",
+                             colClasses = c("character","character","logical"))
     IDs <- read.csv(file = "packages.csv", header = TRUE, 
                     stringsAsFactors = FALSE, quote = "\"")
     rcvdPackages <- rbind(rcvdPackages, IDs[IDs$Received == TRUE, ])
